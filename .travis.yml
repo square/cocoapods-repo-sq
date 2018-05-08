@@ -1,0 +1,13 @@
+language: ruby
+rvm:
+- 2.0
+- 2.2
+- 2.4
+deploy:
+  provider: rubygems
+  api_key:
+    secure: khdJjps5SOkhQsUfMXqGu0pMFh73P2AaKtSjHFbGQb61q5kYmGICok71F+x+TbGhAGRy56/qvDWwqvsZT0pzlvSXQ+/sYnNf04uW06pSz3S0cBT5I3zMVtK9qxFg3AJZidcufpAWsDaKVh+kuIz8FYxtvvMgtm7Nmpc3hxbdwZUzmKUZHRf+QsNNaKKzGRbRNTB4sTYiRIxQbaQpvl3v05P23qcKHQFC4JCmwTuJ4Bs2PnvYshRiy4hM5XTrQZNakSjkY5MACfWYjIrJMtoNuERyzOb8EPRaD8A9gs+EJOYfAdfEY01V/gyChYOUJ5j+OKfeWWIgoPO+wI3J9CFGjzWYIISn2EDl+7eoDvek5JXu6oKbNfOSwyMm9hvBYF7hQyagXv3y7VRLbiB8AEHg+tKzo407LqrljrZAKf+gyhGp69QNoaQA+ZDiK1D3fkUlBOA02CeGQpB7SbIgFdl6CcKnpi/gp/Rc/w0n/Z1zV2iGPjr7lh6BEVesSSyldpyULYlr7NA+6vKxuopBsdM+JPEk7bhQAjiQiDoP04YGr1bNyco2HYcQAhtVtwYM8ZNKTJUeka7Lx3JjYJADomHIrF0h7xiv+FnaoKHWwksRr1BAaTCtF2PgQ8UBWU8VB385tOSuhRz+YQw4HG7K2d6+epkYIwd5jDX2Uxus1uvHMTU=
+  gem: cocoapods-repo-sq
+  on:
+    tags: true
+    repo: square/cocoapods-repo-sq
