@@ -46,9 +46,16 @@ module CocoapodsRepoSq
       specs_path = File.join(@path, 'Specs')
       CocoapodsRepoSq::Downloader.expects(:new).with(new_specs_path, "specs.zip", :repository => @repository).returns(downloader)
 
+      Dir.expects(:exists?).with(new_specs_path).returns(true)
       FileUtils.expects(:rm_rf).with(new_specs_path)
-      FileUtils.expects(:rm).with(File.join(new_specs_path, "file.zip"))
+
+      new_specs_file = File.join(new_specs_path, "file.zip")
+      File.expects(:exists?).with(new_specs_file).returns(true)
+      FileUtils.expects(:rm).with(new_specs_file)
+
+      Dir.expects(:exists?).with(specs_path).returns(true)
       FileUtils.expects(:rm_rf).with(specs_path)
+
       FileUtils.expects(:mv).with(new_specs_path, specs_path)
 
       @repository.update_specs

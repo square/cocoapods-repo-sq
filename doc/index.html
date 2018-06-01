@@ -6,7 +6,7 @@
 <title>
   File: README
 
-    &mdash; Documentation by YARD 0.9.9
+    &mdash; Documentation by YARD 0.9.12
 
 </title>
 
@@ -57,82 +57,88 @@
         <div class="clear"></div>
       </div>
 
-      <div id="content"><div id='filecontents'><h1 id="cocoapodsreposq">CocoapodsRepoSq</h1>
-<p><a href="http://rubygems.org/gems/cocoapods-repo-sq"><img src="https://badge.fury.io/rb/cocoapods-repo-sq.svg" alt="Gem Version" /></a>
-<a href="https://travis-ci.org/square/cocoapods-repo-sq"><img src="https://travis-ci.org/square/cocoapods-repo-sq.svg?branch=master" alt="Build Status" /></a>
-<a href="https://github.com/square/cocoapods-repo-sq/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-Apache2-blue.svg" alt="Apache 2 licensed" /></a></p>
+      <div id="content"><div id='filecontents'>
+<h1 id="label-CocoapodsRepoSq">CocoapodsRepoSq</h1>
+
+<p><a href="http://rubygems.org/gems/cocoapods-repo-sq"><img
+src="https://badge.fury.io/rb/cocoapods-repo-sq.svg"></a> <a
+href="https://travis-ci.org/square/cocoapods-repo-sq"><img
+src="https://travis-ci.org/square/cocoapods-repo-sq.svg?branch=master"></a>
+<a
+href="https://github.com/square/cocoapods-repo-sq/blob/master/LICENSE"><img
+src="https://img.shields.io/badge/license-Apache2-blue.svg"></a></p>
 
 <p>Adds support for Square SDK Repositories to Cocoapods</p>
 
-<h2 id="installation">Installation</h2>
+<h2 id="label-Installation">Installation</h2>
 
-<pre class="code ruby"><code class="ruby">$ gem install cocoapods-repo-sq
-</code></pre>
+<pre class="code ruby"><code class="ruby">$ gem install cocoapods-repo-sq</code></pre>
 
-<h2 id="usage">Usage</h2>
+<h2 id="label-Usage">Usage</h2>
 
-<h3 id="integrate-in-your-project">Integrate in your project</h3>
+<h3 id="label-Integrate+in+your+project">Integrate in your project</h3>
 
-<p>Add a Square SDK Repository to your local cocoapods registry. <code>NAME</code> is a nickname you’ll use to refer to this repository later in your <code>Podfile</code> and other <code>pod repo-sq</code> commands:
-<code>shell
-$ pod repo-sq add NAME USERNAME PASSWORD
-</code></p>
+<p>Add a Square SDK Repository to your local cocoapods registry.
+<code>NAME</code> is a nickname you&#39;ll use to refer to this repository
+later in your <code>Podfile</code> and other <code>pod repo-sq</code>
+commands: <code>shell $ pod repo-sq add NAME USERNAME PASSWORD </code></p>
 
-<p>Specify your Square SDK repository in your <code>Podfile</code>:
-```ruby
-plugin ‘cocoapods-repo-sq’, :repository =&gt; ‘NAME’</p>
+<p>Specify your Square SDK repository in your <code>Podfile</code>: “`ruby
+plugin &#39;cocoapods-repo-sq&#39;, :repository =&gt; &#39;NAME&#39;</p>
 
-<p>target ‘MyTarget’ do
-  pod ‘SquareSDK’
-end
-```</p>
+<p>target &#39;MyTarget&#39; do  pod &#39;SquareSDK&#39; end “`</p>
 
-<h3 id="commands">Commands</h3>
+<h3 id="label-Commands">Commands</h3>
 
 <p>Add</p>
 
-<pre class="code ruby"><code class="ruby">$ pod repo-sq add NAME USERNAME PASSWORD
-</code></pre>
+<pre class="code ruby"><code class="ruby">$ pod repo-sq add NAME USERNAME PASSWORD</code></pre>
 
 <p>List</p>
 
-<pre class="code ruby"><code class="ruby">$ pod repo-sq list
-</code></pre>
+<pre class="code ruby"><code class="ruby">$ pod repo-sq list</code></pre>
 
 <p>Update</p>
 
-<pre class="code ruby"><code class="ruby">$ pod repo-sq update NAME
-</code></pre>
+<pre class="code ruby"><code class="ruby">$ pod repo-sq update NAME</code></pre>
 
 <p>Remove</p>
 
-<pre class="code ruby"><code class="ruby">$ pod repo-sq remove NAME
-</code></pre>
+<pre class="code ruby"><code class="ruby">$ pod repo-sq remove NAME</code></pre>
 
-<h2 id="multiple-applications">Multiple Applications</h2>
+<h2 id="label-Multiple+Applications">Multiple Applications</h2>
 
-<p>If you have multiple Square Applications you will have multiple SDK Repositories. <code>cocoapods-repo-sq</code> supports this by allowing you to add multiple repositories to your registry. Just remember to point your <code>Podfile</code> to the right one using the <code>plugin 'cocoapods-repo-sq', :repository =&gt; 'NAME'</code> statement.</p>
+<p>If you have multiple Square Applications you will have multiple SDK
+Repositories. <code>cocoapods-repo-sq</code> supports this by allowing you
+to add multiple repositories to your registry. Just remember to point your
+<code>Podfile</code> to the right one using the <code>plugin
+&#39;cocoapods-repo-sq&#39;, :repository =&gt; &#39;NAME&#39;</code>
+statement.</p>
 
-<h2 id="contributing">Contributing</h2>
+<h2 id="label-Contributing">Contributing</h2>
 
-<p>We are currently not accepting code contributions to this repository. If you found a bug or have a feature request please <a href="https://github.com/square/cocoapods-repo-sq/issues/new">Submit it here</a>.</p>
+<p>We are currently not accepting code contributions to this repository. If
+you found a bug or have a feature request please <a
+href="https://github.com/square/cocoapods-repo-sq/issues/new">Submit it
+here</a>.</p>
 
-<p>If you are curious about Cocoapods and its plugin system take a look at the following guides:
-- https://blog.cocoapods.org/CocoaPods-0.28/
-- https://guides.cocoapods.org/reference.html
-- https://github.com/CocoaPods/cocoapods-plugins</p>
+<p>If you are curious about Cocoapods and its plugin system take a look at the
+following guides: - <a
+href="https://blog.cocoapods.org/CocoaPods-0.28">blog.cocoapods.org/CocoaPods-0.28</a>/
+- <a
+href="https://guides.cocoapods.org/reference.html">guides.cocoapods.org/reference.html</a>
+- <a
+href="https://github.com/CocoaPods/cocoapods-plugins">github.com/CocoaPods/cocoapods-plugins</a></p>
 
-<h2 id="building">Building</h2>
+<h2 id="label-Building">Building</h2>
 
-<pre class="code ruby"><code class="ruby">$ rake build
-</code></pre>
+<pre class="code ruby"><code class="ruby">$ rake build</code></pre>
 
-<h2 id="testing">Testing</h2>
+<h2 id="label-Testing">Testing</h2>
 
-<pre class="code ruby"><code class="ruby">$ rake specs
-</code></pre>
+<pre class="code ruby"><code class="ruby">$ rake specs</code></pre>
 
-<h2 id="license">License</h2>
+<h2 id="label-License">License</h2>
 
 <pre class="code ruby"><code class="ruby">Copyright 2018 Square Inc.
 
@@ -146,14 +152,13 @@ Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
-limitations under the License.
-</code></pre>
+limitations under the License.</code></pre>
 </div></div>
 
       <div id="footer">
-  Generated on Tue May  8 15:22:22 2018 by
+  Generated on Fri Jun  1 09:24:33 2018 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.9 (ruby-2.4.2).
+  0.9.12 (ruby-2.4.0).
 </div>
 
     </div>
