@@ -93,8 +93,9 @@ module CocoapodsRepoSq
 
       # perform cleanup
       specs_path = File.join(@path, 'Specs')
-      FileUtils.rm(File.join(new_specs_path, "file.zip"))
-      FileUtils.rm_rf(specs_path)
+      new_specs_file = File.join(new_specs_path, "file.zip")
+      FileUtils.rm(new_specs_file) if File.exists?(new_specs_file)
+      FileUtils.rm_rf(specs_path) if Dir.exists?(specs_path)
       FileUtils.mv(new_specs_path, specs_path)
       nil
     end
@@ -102,7 +103,7 @@ module CocoapodsRepoSq
     private
     def get_temporary_path
       temp_path = File.join(@path, 'Specs.new')
-      FileUtils.rm_rf(temp_path)
+      FileUtils.rm_rf(temp_path) if Dir.exists?(temp_path)
       temp_path
     end
   end
